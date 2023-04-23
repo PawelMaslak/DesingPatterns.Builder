@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Builder.HouseBuilder.Abstraction;
 using Builder.HouseBuilder.Helpers;
-using Builder.HouseBuilder.Product;
+using Builder.Models;
 
 namespace Builder.HouseBuilder.ConcreteBuilders
 {

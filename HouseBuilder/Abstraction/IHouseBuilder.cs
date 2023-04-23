@@ -1,4 +1,4 @@
-﻿using Builder.HouseBuilder.Product;
+﻿using Builder.Models;
 
 namespace Builder.HouseBuilder.Abstraction
 {

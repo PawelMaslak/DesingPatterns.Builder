@@ -6,9 +6,14 @@
 #endregion
 
 
+using System.Runtime.InteropServices;
+using Builder.DefaultBuilder;
 using Builder.HouseBuilder;
 using Builder.HouseBuilder.Abstraction;
 using Builder.HouseBuilder.ConcreteBuilders;
+using Builder.HouseBuilderExtensionMethods;
+using Builder.Models;
+using static System.Console;
 
 IHouseBuilder houseBuilder = new BasicHouseBuilder();
 Director director = new Director(houseBuilder);
@@ -20,5 +25,14 @@ director.ChangeBuilder(houseWithSwimmingPoolBuilder);
 director.BuildHouse();
 houseWithSwimmingPoolBuilder.GetInfo();
 
+var extensionMethodsHouse = ExtensionMethodsHouseBuilder.BuildHouse()
+    .LayFoundations(new House.Foundation {ConcreteAmount = 10, Material = "Concrete"})
+    .BuildWalls(new House.Wall {Material = "Brick", TotalLength = 10});
 
+DefaultHouseBuilder defaultHouseBuilder = new DefaultHouseBuilder();
+
+var defaultBuilderHouse = defaultHouseBuilder
+    .BuildFoundations(new House.Foundation { ConcreteAmount = 10, Material = "Concrete" })
+    .BuildWalls(new House.Wall { Material = "Brick", TotalLength = 10 })
+    .Build();
 
