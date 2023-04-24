@@ -51,6 +51,8 @@ var extensionMethodsHouse = ExtensionMethodsHouseBuilder.BuildHouse()
 
 #region Default Builder
 
+//This is very similar to Extension Methods Builder but the main build method is at the very end of the call.
+
 DefaultHouseBuilder defaultHouseBuilder = new DefaultHouseBuilder();
 
 var defaultBuilderHouse = defaultHouseBuilder
