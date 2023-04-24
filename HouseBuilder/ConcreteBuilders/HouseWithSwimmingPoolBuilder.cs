@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Builder.Helpers;
 using Builder.HouseBuilder.Abstraction;
-using Builder.HouseBuilder.Helpers;
 using Builder.Models;
 
 namespace Builder.HouseBuilder.ConcreteBuilders

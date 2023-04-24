@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Builder.HouseBuilder.Abstraction;
+using Builder.Models;
 
 namespace Builder.HouseBuilder
 {
@@ -32,6 +33,11 @@ namespace Builder.HouseBuilder
             _builder.BuildRoof();
 
             _builder.BuildExtras();
+        }
+
+        public House GetBuiltObject()
+        {
+            return _builder.GetResult();
         }
     }
 }
